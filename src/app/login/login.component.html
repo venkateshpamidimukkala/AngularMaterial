@@ -1,0 +1,266 @@
+<div class="container-fluid">
+  <header>
+    <!-- <a routerLink="/"class=""> <img mat-card-image src="./assests/img/header.png" alt="Photo of a Shiba Inu"></a> -->
+    <div class="card-group">
+      <div class="card">
+        <img src="./assets/img/sssvs_logo.png" alt="..." />
+      </div>
+      <div class="card">
+        <img src="./assets/img/header.png" class="" alt="..." />
+      </div>
+      <div class="card">
+        <img src="./assets/img/banner.jpg" class="" alt="..." />
+      </div>
+      <div class=""></div>
+    </div>
+
+    <mat-toolbar color="accent">
+      <!-- <img src="./assets/img/sssvs_logo.png"  alt="msg"> -->
+      <!-- <span>SRI SATHYA SAI VIDYA VAHINI</span> -->
+      <span class="spacer"></span>
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/admin"><button mat-raised-button color="accent" [matMenuTriggerFor]="admin">
+                Admin<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #admin="matMenu">
+                <button mat-menu-item (click)="btnClick()">
+                  Approve Schools
+                </button>
+                <!-- <mat-progress-bar mode="query"></mat-progress-bar> -->
+                <button mat-menu-item (click)="btnClick()">Manage Roles</button>
+                <button mat-menu-item (click)="btnClick1()">
+                  Manage Groups
+                </button>
+                <button mat-menu-item (click)="btnClick2()">
+                  Check Volunteer Avaliablity
+                </button>
+                <button mat-menu-item (click)="btnClick3()">
+                  Event Nominations
+                </button>
+                <button mat-menu-item (click)="btnClick4()">
+                  Manage Users
+                </button>
+                  <button mat-menu-item [matMenuTriggerFor]="ManageHomePage">Manage HomePage</button>
+                  <mat-menu #ManageHomePage="matMenu">
+                    <button mat-menu-item>Corousel</button>
+                    <button mat-menu-item>About us</button>
+                    <button mat-menu-item>Latest News</button>
+                    <button mat-menu-item>Upcoming Events</button>
+                    <button mat-menu-item>Volunteer of the month</button>
+                    <button mat-menu-item>FAQ</button>
+                    <button mat-menu-item>Contact us</button>
+                  </mat-menu>
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/content"><button mat-raised-button color="accent" [matMenuTriggerFor]="cms">
+                CMS<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #cms="matMenu">
+                <button mat-menu-item>Manage MasterData</button>
+                <button mat-menu-item>Manage Content</button>
+                <button mat-menu-item>Content Search</button>
+                <button mat-menu-item>3C Content</button>
+                <button mat-menu-item>Create Assest</button>
+                <button mat-menu-item>Upload gallery</button>
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/deployment">
+              <button mat-raised-button color="accent" [matMenuTriggerFor]="deployment">
+                Deployment<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #deployment="matMenu">
+                <button mat-menu-item>My Deployment</button>
+                <button mat-menu-item>My Download Request</button>
+                <button mat-menu-item>Latest SRC and school Data</button>
+                <button mat-menu-item>Recommended software and fonts</button>
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/helpdesk">
+              <button mat-raised-button color="accent" [matMenuTriggerFor]="helpdesk">
+                Helpdesk<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #helpdesk="matMenu">
+                <button mat-menu-item>View Ticket</button>
+                <button mat-menu-item>DashBoard</button>
+                <button mat-menu-item>ViewSupport/Admin Team</button>
+                <button mat-menu-item>My Request Summary</button>
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/packages">
+              <button mat-raised-button color="accent" [matMenuTriggerFor]="packages">
+                Packages<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #packages="matMenu">
+                <button mat-menu-item>Create Package</button>
+                <button mat-menu-item>View Package</button>
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/reports">
+              <button mat-raised-button color="accent" [matMenuTriggerFor]="reports">
+                Reports<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #reports="matMenu">
+                <button mat-menu-item>View Reports</button>
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/school"><button mat-raised-button color="accent" [matMenuTriggerFor]="schools">
+                Schools<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #schools="matMenu">
+                <button mat-menu-item>All Schools</button>
+                <!-- <button mat-menu-item>Manage Content</button>
+                <button mat-menu-item>Content Search</button>
+                <button mat-menu-item>3C Content</button>
+                <button mat-menu-item>Create Assest</button>
+                <button mat-menu-item>Upload gallery</button> -->
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/trainings"><button mat-raised-button color="accent" [matMenuTriggerFor]="trainings">
+                Trainings<mat-icon>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #trainings="matMenu">
+                <button mat-menu-item (click)="btnTMSClick1()">Calender View</button>
+                <button mat-menu-item (click)="btnTMSClick2()">Traning List</button>
+                <button mat-menu-item (click)="btnTMSClick4()">Schedule Traninig</button>
+                <button mat-menu-item (click)="btnTMSClick3()">Traning Status</button>
+                <!-- <button mat-menu-item>Create Assest</button>
+                <button mat-menu-item>Upload gallery</button> -->
+              </mat-menu>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/main-nav"><button mat-raised-button color="accent">
+                Registeration
+              </button></a>
+          </li>
+        </ul>
+      </nav>
+    </mat-toolbar>
+  </header>
+</div>
+<!-- <nav>
+  <ul>
+    <li><button mat-button color="secondary" [matMenuTriggerFor]="admin">Admin</button>
+      <mat-menu #admin="matMenu">
+        <button mat-menu-item>Approve Schools</button>
+        <button mat-menu-item>Manage Roles</button>
+        <button mat-menu-item>Manage Groups</button>
+        <button mat-menu-item>Check Volunteer Avaliablity</button>
+        <button mat-menu-item>Event Nominations</button>
+        <button mat-menu-item>Manage Users</button>
+        <button mat-menu-item>Manage HomePage</button>
+      </mat-menu>
+    </li>
+    <li><a routerLink="/content"><button mat-raised-button color="secondary">CMS</button></a></li>
+    <li><a routerLink="/deployment"><button mat-raised-button color="secondary">Deployment</button></a></li>
+    <li><a routerLink="/helpdesk"><button mat-raised-button color="secondary">Helpdesk</button></a></li>
+    <li><a routerLink="/packages"><button mat-raised-button color="secondary">Packages</button></a></li>
+    <li><a routerLink="/reports"><button mat-raised-button color="secondary">Reports</button></a></li>
+    <li><a routerLink="/school"><button mat-raised-button color="secondary">Schools</button></a></li>
+    <li><a routerLink="/trainings"><button mat-raised-button color="secondary">Trainings</button></a></li>
+    <li><a routerLink="/main-nav"><button mat-raised-button color="secondary">Registeration</button></a></li>
+  </ul>
+</nav> -->
+
+<div class="container-fluid">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    
+  </div>
+</div>
+
+<!-- <div class="container-fluid">
+   <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Deployment Apps</mat-card-title>
+          <mat-card-subtitle>Deployment App</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+</div> -->
+<!-- <div class="container-fluid">
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Secondary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Success card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Danger card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Warning card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Info card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Light card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Header</div>
+      <div class="card-body">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+</div> -->

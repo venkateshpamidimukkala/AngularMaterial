@@ -1,0 +1,119 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>cms</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  <!--</mat-sidenav-content>
+</mat-sidenav-container> -->
+<!--<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>
+        <a routerLink="/home">Owner-Account</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <li>
+                <a routerLink="/owner">Owner Actions</a>
+            </li>
+            <li>
+                <a routerLink="/account">Account Actions</a>
+            </li>
+        </ul>
+    </div> 
+
+    
+  </mat-toolbar>-->
+<p>Site Under Work Please Try again</p>
+<div class="conatiner">
+  <div class="reg">
+  <h1>Registeration Form</h1>
+  <div class="example-container">
+      
+      <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+          {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+        </button>
+        <mat-horizontal-stepper [linear]="isLinear" #stepper>
+          <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+              <ng-template matStepLabel>Fill out your name</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="First name" formControlName="lastCtrl" required>
+              </mat-form-field>
+            
+              <mat-form-field>
+                  <input matInput placeholder="Last name" formControlName="lastCtrl" required>
+                </mat-form-field>
+                
+                <div>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+
+            </form>
+          </mat-step>
+
+          <mat-step [stepControl]="firstFormGroup">
+              <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Email id</ng-template>
+                
+                <mat-form-field>
+                    <input matInput placeholder="Last name" formControlName="firstCtrl" required>
+                  </mat-form-field>
+                <div>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+          
+
+
+          <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>Mobile Number</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            You are now done.
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+
+
+      </div>
+   </div>   
+</div>
+

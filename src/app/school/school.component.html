@@ -1,0 +1,60 @@
+<p>
+  school works!
+</p>
+<p>Pipe for angular 6</p>
+<div style="width:100%">
+<div style="width:40%;float:left;border:solid 1px black;">
+
+ <p>Today My friend Bithday {{birthday | date :'d/M/y' }}</p>
+
+<h1> Upper case letters</h1>
+<p>{{ name | uppercase}}</p>
+ <h1>Lowercase letters</h1>
+<b>{{title | lowercase}}</b>
+<b>{{6589.23 | currency:"USD"}}</b>
+<p>Currency pipe</p>
+<b>{{6589.23 | currency:"USD" :true}}</b>
+<h1>Date pipe</h1>  
+<b>{{todayDate | date:'d/M/y'}}</b>
+
+<b>{{454.787877814 | number:'3.4-4' }}</b>
+
+<b>{{ jsonval | json}}</b>
+
+<b>{{ 00.54566 | percent }}</b> 
+<b>{{ month | slice:2:6}}</b>
+
+<h1>Date Format for Toggle Date</h1>
+<!-- <button [click]="toggleFormat()">Date</button> -->
+<p>The hero's birthday is {{ birthday | date }}</p>
+<button mat-raised-button (click)="toggleFormat()"> Date </button>
+
+
+<p>Super Power Boot</p>
+
+    <p>
+      Super Hero Power: 
+    </p>
+  <!-- <h1>Currency Letters</h1>
+  <b>{{6589.23 | currency:"USD"}}</b>
+  <b>{{6589.23 | currency:"USD" :true}}</b>
+
+  
+  <b>{{todayDate | date:'d/M/y'}}</b>
+  <b>{{todayDate | date:'shortTime}}</b>
+
+  <h1>Decimal pipe</h1>
+  <b>{{454.787877814 | number:'3.4-4' }}</b>
+</div>
+
+<div style="width:40%;float:left;border:solid 1px black;">
+<h1>Json pipe</h1>
+<b>{{jsonval |json}}</b>
+
+<h1>Precentage pipe</h1>
+<b>{{ 00.54566 | percent }}</b> 
+
+<h1>Slice pipe</h1>
+<b>{{ month | slice:2:6}}</b>  -->
+</div>
+</div>

@@ -1,0 +1,49 @@
+<p>
+  admin works!
+</p>
+<div style="text-align:left;width:500px;">
+  <h1>
+      {{ title }}!
+  </h1>
+
+  <table *ngIf="arrBirds">
+      <!-- ADD HEADERS -->
+      <tr>
+          <th>ID</th>
+              <th>Name of Bird</th>
+                  <th>Type of Bird</th>
+      </tr>
+
+      <!-- BIND ARRAY TO TABLE -->
+      <tr *ngFor="let bird of arrBirds">
+          <td>{{bird.id}}</td>
+              <td>{{bird.name}}</td>
+                  <td>{{bird.Type}}</td>
+      </tr>
+  </table>
+
+  <button type="button" (click)="downloadPDF()">DownloadPDF Document</button>
+</div>
+<div id="content" #content>
+    <h1>Welcome to HTML TO PDF Convertation</h1>
+    <p>welcome to html to pdf convertation using any html to pdf converstation</p>
+    <div style="text-align:left;width:500px;">
+        <h1>
+            {{ title }}!
+        </h1>
+        <table *ngIf="arrBirds">
+            <!-- ADD HEADERS -->
+            <tr>
+                <th>ID</th>
+                    <th>Name of Bird</th>
+                        <th>Type of Bird</th>
+            </tr>
+            <!-- BIND ARRAY TO TABLE -->
+            <tr *ngFor="let bird of arrBirds">
+                <td>{{bird.id}}</td>
+                    <td>{{bird.name}}</td>
+                  <td>{{bird.Type}}</td>
+            </tr>
+        </table>
+</div>
+<button type="button" (click)="PDF()">HTML TO PDF CONVERSTATION</button>
